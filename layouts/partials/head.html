@@ -1,0 +1,83 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{else if .IsPage}}{{ .Summary | plainify}}{{ else }}{{.Site.Params.description}}{{ end }}">
+    <meta name="author" content="">
+
+    {{ "<!-- Mobile Specific Meta -->" | safeHTML }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ hugo.Generator }}
+
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .IsPage}}{{ .Title }}{{" | "}}{{ .CurrentSection.Title }}{{else if eq .Section "author" }}{{if .Params.name}}{{.Params.name}} | {{ i18n "authorOfPostsOnBlog" }} „{{.Site.Title}}" {{else}}{{ i18n "authorsOfPostsOnBlog" }} „{{.Site.Title}}"{{end}}{{else if eq .Section "blog" }}{{ i18n "blogs" }} | {{ .Site.Title}}{{else}}{{ .Title }}{{with .Params.Description}}{{" | " .}}{{ end }}{{ end }}</title>
+    
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:description" content="{{ .Description }}">
+    <meta property="og:site_name" content="Netspective Foundation" />
+    <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Netspective Foundation" />
+    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:description" content="{{.Summary }}" />
+    <meta property="twitter:image" content="{{ .Site.Params.logo | absURL }}"/>
+   
+
+    {{"<!-- Favicon -->" |safeHTML}}
+    <!--<link rel="shortcut icon" type="image/x-icon" href="{{ "images/favicon.ico" | absURL }}"/>-->
+
+    {{"<!-- CSS -->"|safeHTML}}
+    {{"<!-- Fontawesome Icon font -->"|safeHTML}}
+    <link rel="stylesheet" href="{{"/plugins/themefisher-font/style.css" | absURL}}">
+    {{"<!-- bootstrap.min css -->"|safeHTML}}
+    <link rel="stylesheet" href="{{"/plugins/bootstrap/dist/css/bootstrap.min.css"|absURL}}">
+    {{"<!-- Animate.css -->"|safeHTML}}
+    <link rel="stylesheet" href="{{"/plugins/animate-css/animate.css"|absURL}}">
+    {{"<!-- Magnific popup css -->"|safeHTML}}
+    <link rel="stylesheet" href="{{"/plugins/magnific-popup/dist/magnific-popup.css"|absURL}}">
+    {{"<!-- Slick Carousel -->"|safeHTML}}
+    <link rel="stylesheet" href="{{"/plugins/slick-carousel/slick/slick.css"|absURL}}">
+    <link rel="stylesheet" href="{{"/plugins/slick-carousel/slick/slick-theme.css"|absURL}}">
+    {{"<!-- Main Stylesheet -->"|safeHTML}}
+    {{ $styles := resources.Get "css/style.css" | minify}}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+    {{ "<!-- Custom CSS -->" | safeHTML }}
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{ end }}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N9GPTCC');</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Netspective Foundation",
+    "url": "https://www.netspective.foundation/",
+    "logo": "/images/Netspective-Foundation-logo.png",
+    "telephone": "(301) 887-3334",
+    "email": "editor@netspective.media",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1802 Brightseat Rd. Suite 101",
+      "addressLocality": "Landover",
+      "addressRegion": "MD",
+      "postalCode": "20785",
+      "addressCountry": "US"
+    }  
+  }
+
+</script>
+<script type="text/javascript">
+function goToByScroll(id){
+  //console.log(id);
+ 
+    $('html,body').animate({scrollTop: $("#"+id).offset().top},'fast','swing');
+    $(".nav-link").removeClass('active')
+    $("#"+id+'-link').addClass('active');
+}
+</script>
+
+{{- partial "head_custom.html" . }}
+</head>

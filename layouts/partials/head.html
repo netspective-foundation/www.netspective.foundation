@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="{{ .Site.Title }}" />
     <meta name="twitter:description" content="{{.Summary }}" />
     <meta property="twitter:image" content="{{ .Site.Params.logo | absURL }}"/>
-    
+
     <meta name="google-site-verification" content="G03P5FOsqW5T5zeRC-5j9IG3iw3_qyER_k8xpHLe9No" />
 
     {{"<!-- Favicon -->" |safeHTML}}
@@ -45,11 +45,11 @@
     {{ range .Site.Params.custom_css }}
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{ end }}
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WZ982836');</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WZ982836');</script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

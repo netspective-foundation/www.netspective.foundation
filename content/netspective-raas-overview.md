@@ -1,8 +1,8 @@
-# Biomedical Research-as-a-Service (RaaS) with Netspective Foundation  
+# Biomedical Research as a Service (RaaS) with Netspective Foundation  
 Enabling Collaborative & AI-Driven Biomedical Discovery for Professional Researchers and Citizen Scientists Alike
 
-## What is Research-as-a-Service (RaaS)?  
-Research-as-a-Service (RaaS) is a groundbreaking model that democratizes access to cutting-edge research tools, AI-powered analytics, and cloud-based collaboration environments, making biomedical discovery more accessible, scalable, and impactful. Traditionally, research has been siloed within academic institutions, biotech companies, and government agencies. However, modern biomedical research demands new, flexible models that embrace both professional researchers and citizen scientists—people who are deeply invested in understanding and improving their own health or contributing to medical science.  
+## What is Research as a Service (RaaS)?  
+Research as a Service (RaaS) is a groundbreaking model that democratizes access to cutting-edge research tools, AI-powered analytics, and cloud-based collaboration environments, making biomedical discovery more accessible, scalable, and impactful. Traditionally, research has been siloed within academic institutions, biotech companies, and government agencies. However, modern biomedical research demands new, flexible models that embrace both professional researchers and citizen scientists—people who are deeply invested in understanding and improving their own health or contributing to medical science.  
 
 At Netspective Foundation, we provide a next-generation RaaS platform that integrates AI, data science, secure cloud and edge computing, and collaborative workspaces to accelerate research, bridging the gap between institutions and individuals who want to participate in scientific discovery.  
 
